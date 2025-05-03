@@ -1,0 +1,21 @@
+# Parent class
+class Person:
+    def __init__(self, name, idnumber):
+        self.name = name
+        self.idnumber = idnumber
+    
+    def display(self):
+        print(self.name)
+        print(self.idnumber)
+
+# Child class
+class Employee(Person):
+    def __init__(self, name, idnumber, salary, post):
+        super().__init__(name, idnumber)
+        self.salary = salary
+        self.post = post
+
+
+a = Employee('Penguin', 293274329, 12987, "Intern")
+
+a.display()        
